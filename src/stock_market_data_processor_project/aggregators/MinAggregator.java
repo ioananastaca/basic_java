@@ -8,11 +8,14 @@ public class MinAggregator extends Aggregator {
         this.numbers = new ArrayList<Double>(numbers);
     }
 
+    public MinAggregator() {
+    }
+
     @Override
     public double calculate() {
         double min = numbers.get(0);
-        for(Double number : numbers){
-            if(number < min){
+        for (Double number : numbers) {
+            if (number < min) {
                 min = number;
             }
         }
